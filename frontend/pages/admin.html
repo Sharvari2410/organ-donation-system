@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="../index.html">Home</a>
+      <a href="./donors.html">Donor Page</a>
+      <a href="./recipients.html">Recipient Page</a>
+    </div>
+
+    <div class="card">
+      <h1>Admin Dashboard</h1>
+      <div id="adminSummary" class="grid"></div>
+      <p id="matchNote" class="message"></p>
+    </div>
+
+    <div class="card">
+      <h2>Recent Donors (Latest 5)</h2>
+      <ul id="recentDonors" class="list"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Recent Recipients (Latest 5)</h2>
+      <ul id="recentRecipients" class="list"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Matching Pairs (Top 15)</h2>
+      <div class="grid">
+        <div>
+          <label for="filterBloodGroup">Filter by Blood Group</label>
+          <select id="filterBloodGroup">
+            <option value="">All Blood Groups</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div>
+          <label for="filterOrgan">Filter by Organ</label>
+          <select id="filterOrgan">
+            <option value="">All Organs</option>
+          </select>
+        </div>
+      </div>
+      <ul id="matchPairs" class="list"></ul>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
